@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{FE39AB6F-84BD-49EF-9F62-34B7EB0CBC80}</ProjectGuid>
     <RootNamespace>Project1</RootNamespace>
-    <ProjectName>ReadLasTrj</ProjectName>
+    <ProjectName>ReadLas</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -118,11 +118,9 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ReadLas.cpp" />
-    <ClCompile Include="ReadTrj.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ReadLas.h" />
-    <ClInclude Include="ReadTrj.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

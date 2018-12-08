@@ -1,5 +1,4 @@
 #include "ReadLas.h"
-#include "ReadTrj.h"
 #include <string>
 #include <iostream>
 
@@ -9,7 +8,7 @@ int main()
 {
 
 	ReadLas las;
-	las.filename = "A01";
+	las.filename = "points.las";
 	//Read Public Header Block
 	las.read_Header();
 	//display Public Header Block
@@ -21,7 +20,7 @@ int main()
 	//read in point data record
 	las.read_Point_Data_Record();
 	//write point data to txt
-	string outname = "A01.txt";
+	string outname = "points.txt";
 	las.output_PointData(outname);
 
 

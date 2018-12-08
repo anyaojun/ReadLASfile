@@ -4,7 +4,7 @@
 //Read Public Header Block
 void ReadLas::read_Header()
 {
-	string str = filename + ".las";
+	string str = filename;
 	//读取： 
 	ifstream infname(str, ios::binary | ios::in);
     infname.seekg(0, ios::beg);
@@ -98,7 +98,7 @@ void ReadLas::out_Header()
 //read in variable length records
 void ReadLas::read_var_Length_Record()
 {
-	string str = filename + ".las";
+	string str = filename;
 	ifstream infname(str, ios::binary | ios::in);
 	infname.seekg(header.headerSize, ios::beg);
 
@@ -162,7 +162,7 @@ void ReadLas::read_Point_Data_Record()
 	}
 	
 	//start to read point data to Vector<point_Data_Record>
-	string str = filename + ".las";
+	string str = filename;
 	ifstream infname(str, ios::binary | ios::in);
 	infname.seekg(c + 0, ios::beg);//跳转指针到达点数据记录起始位置
 
@@ -238,7 +238,7 @@ void ReadLas::output_PointData(string outname)
 	
 	for (int ii = 0; ii < pointdataRecord.size(); ii++)
 	{
-		foutput << ii << " " << setprecision(13)
+		foutput << " " << setprecision(13)
 			<< (double)(pointdataRecord.at(ii).x * header.x_scale) + header.x_offset << " "
 			<< (double)(pointdataRecord.at(ii).y * header.y_scale) + header.y_offset << " "
 			<< (double)(pointdataRecord.at(ii).z * header.z_scale) + header.z_offset << " "
